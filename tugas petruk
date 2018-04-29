@@ -2,8 +2,36 @@
 using namespace std;
 
 
-void tambahDepan(int databaru1){
-Node *baru;
+class Mahasiswa{
+    int id;
+    char Nama[50];
+};
+
+
+class Node{
+  public:
+    int data;
+    Node *next;
+};
+
+
+Node *head;
+
+void init(){
+    head = NULL;
+}
+
+
+bool isEmpty(){
+    if (head == NULL)
+        return 1;
+    return 0;
+}
+
+
+void tambahDepan(int databaru)
+{
+    Node *baru;
     baru = new Node();
     baru->data = databaru;
     baru->next = baru;
@@ -25,8 +53,6 @@ Node *baru;
         head = baru;
         bantu->next = head;
     }
-
-
 }
 
 
@@ -42,10 +68,10 @@ void hapusDepan(int datahapus1){
 
 void hapusBelakang(int datahapus2){
 
-{
+}
 
 void cetak(){
- if (!isEmpty()){
+    if (!isEmpty()){
         Node *bantu;
         bantu = head;
         do{
@@ -53,29 +79,32 @@ void cetak(){
             bantu=bantu->next;
         }while (bantu!=head);
     } else {
-        cout<<"tidak ada data";
+        cout<<"List Kosong";
     }
-
 }
 
 
-int main(){
-    init();
-    int n, data1,data2,hapus1,hapus2;
+
+
+
+int main()
+{
+   init();
+    int n, data,data2,hapus1,hapus2;
     cout<<"Menambah Node Depan"<<endl;
-    cout<<"banyak data";
+    cout<<"banyak data :";
     cin >> n;
     for (int i = 0; i < n; i++)
     {
         cout<<"data : ";
-        cin >> data;
+        cin >>data;
         tambahDepan(data);
     }
     cetak();
     
     cout<<endl<<endl;
     cout<<"Menambah Node Belakang"<<endl;
-    cout<<"banyak data";
+    cout<<"banyak data :";
     cin>>n;
     for (int i = 0; i < n; i++)
     {
@@ -85,5 +114,6 @@ int main(){
     }
     cetak();
 
-return 0;
+    return 0;
 }
+
