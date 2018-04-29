@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+
+
+void tambahDepan(int databaru1){
+Node *baru;
+    baru = new Node();
+    baru->data = databaru;
+    baru->next = baru;
+
+    if (isEmpty())
+    {
+        head = baru;
+        head->next = head;
+    }
+    else
+    {
+        Node *bantu;
+        bantu = head;
+        while (bantu->next != head)
+        {
+            bantu = bantu->next;
+        }
+        baru->next = head;
+        head = baru;
+        bantu->next = head;
+    }
+
+
+}
+
+
+void tambahBelakang(int databaru2){
+
+}
+
+
+void hapusDepan(int datahapus1){
+
+}
+
+
+void hapusBelakang(int datahapus2){
+
+{
+
+void cetak(){
+ if (!isEmpty()){
+        Node *bantu;
+        bantu = head;
+        do{
+            cout<<bantu->data<<" ,";
+            bantu=bantu->next;
+        }while (bantu!=head);
+    } else {
+        cout<<"tidak ada data";
+    }
+
+}
+
+
+int main(){
+    init();
+    int n, data1,data2,hapus1,hapus2;
+    cout<<"Menambah Node Depan"<<endl;
+    cout<<"banyak data";
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cout<<"data : ";
+        cin >> data;
+        tambahDepan(data);
+    }
+    cetak();
+    
+    cout<<endl<<endl;
+    cout<<"Menambah Node Belakang"<<endl;
+    cout<<"banyak data";
+    cin>>n;
+    for (int i = 0; i < n; i++)
+    {
+        cout<<"data : ";
+        cin >> data2;
+        tambahBelakang(data2);
+    }
+    cetak();
+
+return 0;
+}
