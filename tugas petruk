@@ -44,3 +44,49 @@ int main()
   } while(menu!=8);
   return 0;
 }
+
+void pilih()
+{
+    if(menu==1)
+        tambah_depan();
+    else if(menu==2)
+    tambah_belakang();
+    else if(menu==3)
+        hapus_depan();
+    else if(menu==4)
+    hapus_belakang();
+    else if(menu==5)
+    Menyisipkan_di_posisi_tertentu();
+    else if(menu==6)
+    Hapus_di_posisi_tertentu();
+  else if(menu==7)
+        tampil();
+    else
+    cout<<"selesai";
+}
+
+void buat_baru()
+{
+  baru=(simpul*)malloc(sizeof(struct simpul));
+  
+  cout<<"masukkan nama  : ";cin>>baru->nama;
+    baru->next=NULL;
+    cout<<endl;}
+
+void tambah_depan()
+{
+  buat_baru();
+    if(awal==NULL)
+    {
+        awal=baru;
+    akhir=baru;
+        akhir->next=NULL;
+  }
+    else
+  {
+        baru->next=awal;
+        awal=baru;
+    }
+
+    tampil();
+}
