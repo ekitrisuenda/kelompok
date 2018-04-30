@@ -252,3 +252,4 @@ void Hapus_di_posisi_tertentu(){
 	 getch();
 }
 }
+ 
