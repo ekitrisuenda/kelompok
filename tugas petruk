@@ -142,3 +142,80 @@ void hapus_belakang()
     }
     tampil();
 }
+void tampil()
+{
+	system("cls");
+	cout<<"antrian pemberangkatan haji"<<endl<<endl;
+	cout<<"urutan : "<<endl;
+   if (awal==NULL)
+    cout<<"Kosong";
+   else
+   {
+   bantu=awal;
+   while(bantu!=NULL)
+   {
+    cout<<"nama : "<<bantu->nama;
+    bantu=bantu->next;
+    cout<<endl;   }
+   cout<<endl;
+   }
+   getch();
+}
+
+void Menyisipkan_di_posisi_tertentu(){	
+	int urutan;
+ buat_baru();
+ if(awal==NULL)
+    {
+    cout<<"urutan kebrapa : ";
+    	cin>>urutan;
+    	
+   	
+    if(urutan==1)
+    {
+     if(awal==NULL)
+    {
+        awal=baru;
+    akhir=baru;
+        akhir->next=NULL;
+  }
+    else
+  {
+        baru->next=awal;
+        awal=baru;
+    }
+}
+else if(urutan==2){
+	cout<<"blum"<<endl;
+	
+}
+else {
+	if(awal==NULL)
+    {
+    awal=baru;
+    }
+    else
+  {
+        akhir->next=baru;
+  }
+    akhir=baru;
+    akhir->next=NULL;
+    tampil();
+	
+}
+
+
+
+
+}
+	
+	
+	
+	cout<<"belum kelar"<<endl<<endl;
+	 getch();
+}
+
+void Hapus_di_posisi_tertentu(){
+	cout<<"belum kelar"<<endl<<endl;
+	 getch();
+}
