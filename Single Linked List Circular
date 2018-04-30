@@ -148,7 +148,7 @@ void tampil()
 	cout<<"antrian pemberangkatan haji"<<endl<<endl;
 	cout<<"urutan : "<<endl;
    if (awal==NULL)
-    cout<<"Kosong";
+    cout<<"Kosong"<<endl<<endl;
    else
    {
    bantu=awal;
@@ -165,8 +165,7 @@ void tampil()
 void Menyisipkan_di_posisi_tertentu(){	
 	int urutan;
  buat_baru();
- if(awal==NULL)
-    {
+
     cout<<"urutan kebrapa : ";
     	cin>>urutan;
     	
@@ -184,11 +183,9 @@ void Menyisipkan_di_posisi_tertentu(){
         baru->next=awal;
         awal=baru;
     }
+    tampil();
 }
-else if(urutan==2){
-	cout<<"blum"<<endl;
-	
-}
+
 else {
 	if(awal==NULL)
     {
@@ -202,20 +199,56 @@ else {
     akhir->next=NULL;
     tampil();
 	
+
+
+
 }
 
-
-
-
-}
-	
-	
-	
-	cout<<"belum kelar"<<endl<<endl;
 	 getch();
 }
 
 void Hapus_di_posisi_tertentu(){
-	cout<<"belum kelar"<<endl<<endl;
+		int urutan;
+
+    cout<<"urutan kebrapa : ";
+    	cin>>urutan;
+    	
+   	
+    if(urutan==1)
+    {
+	 if (awal==NULL)
+        cout<<"Kosong";
+  else
+    {
+        hapus=awal;
+        awal=awal->next;
+    (hapus);
+    }
+    tampil();
+}else{
+
+  
+   if (awal==NULL)
+    cout<<"Kosong";
+    else if(awal==akhir)
+    {
+   hapus=awal;
+         awal=awal->next;
+         (hapus);
+  }
+    else
+    {
+    hapus=awal;
+    while(hapus->next!=akhir)
+     hapus=hapus->next;
+        akhir=hapus;
+    hapus=akhir->next;
+        akhir->next=NULL;
+    (hapus);
+    }
+    tampil();
+  
+  
 	 getch();
+}
 }
