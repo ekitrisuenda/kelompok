@@ -107,6 +107,7 @@ void tambah_belakang()
     tampil();
 }
 
+  
 void hapus_depan()
 {
   if (awal==NULL)
