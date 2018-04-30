@@ -90,3 +90,55 @@ void tambah_depan()
 
     tampil();
 }
+
+void tambah_belakang()
+{
+    buat_baru();
+  if(awal==NULL)
+    {
+    awal=baru;
+    }
+    else
+  {
+        akhir->next=baru;
+  }
+    akhir=baru;
+    akhir->next=NULL;
+    tampil();
+}
+
+void hapus_depan()
+{
+  if (awal==NULL)
+        cout<<"Kosong";
+  else
+    {
+        hapus=awal;
+        awal=awal->next;
+    (hapus);
+    }
+  tampil();
+}
+
+void hapus_belakang()
+{
+    if (awal==NULL)
+    cout<<"Kosong";
+    else if(awal==akhir)
+    {
+   hapus=awal;
+         awal=awal->next;
+         (hapus);
+  }
+    else
+    {
+    hapus=awal;
+    while(hapus->next!=akhir)
+     hapus=hapus->next;
+        akhir=hapus;
+    hapus=akhir->next;
+        akhir->next=NULL;
+    (hapus);
+    }
+    tampil();
+}
