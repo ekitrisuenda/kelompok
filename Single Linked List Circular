@@ -2,10 +2,9 @@
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-
 using namespace std;
 
+//fungsi
 int menu;
 void pilih();
 void buat_baru();
